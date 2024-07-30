@@ -36,7 +36,7 @@ summary(model_BMIIHD)
 model_BMIIHD %>%
   tbl_regression(exponentiate = TRUE) %>%
   as_gt() %>%
-  gt::tab_options(table.font.names = "Times New Roman")
+  gt::tab_options(table.font.names = "Calibri")
 
 
 #Univariate: OSA_FLAG against IHD_CAT
@@ -55,7 +55,7 @@ summary(model_OSAIHD)
 model_OSAIHD %>%
   tbl_regression(exponentiate = TRUE) %>%
   as_gt() %>%
-  gt::tab_options(table.font.names = "Times New Roman")
+  gt::tab_options(table.font.names = "Calibri")
 
 
 #Univariate: GENDER against IHD_CAT
@@ -69,7 +69,7 @@ summary(model_GenderIHD)
 model_GenderIHD %>%
   tbl_regression(exponentiate = TRUE) %>%
   as_gt() %>%
-  gt::tab_options(table.font.names = "Times New Roman")
+  gt::tab_options(table.font.names = "Calibri")
 
 #Univariate: HT_STAGE against IHD_CAT
 
@@ -89,7 +89,7 @@ model_HTIHD %>%
   tbl_regression(exponentiate = TRUE) %>%
   as_gt() %>%
   gt::tab_source_note(gt::md("*Stage 3 hypertension excluded from analysis as<br> only one subject had this reading*"))%>%
-  gt::tab_options(table.font.names = "Times New Roman")
+  gt::tab_options(table.font.names = "Calibri")
 
 
 
@@ -111,7 +111,7 @@ model_AGEIHD %>%
   tbl_regression(exponentiate = TRUE) %>%
   as_gt() %>%
   gt::tab_source_note(gt::md("*Age group 30-39 was excluded from the analysis due to <br>low numbers within the study population*"))%>%
-  gt::tab_options(table.font.names = "Times New Roman")
+  gt::tab_options(table.font.names = "Calibri")
 
 
 #________________________________________________________________________
@@ -154,7 +154,7 @@ forest_plot_bmi <- ggplot(lm_model_out_bmi, aes(x = estimate, xmin = conf.low, x
   geom_vline(xintercept = 1, linetype = "dashed", color = "gray") +
   labs(x = "Effect size", y = "Predictor") +
   theme_minimal()+
-  theme(text = element_text(family = "Times New Roman")) +
+  theme(text = element_text(family = "Calibri")) +
   theme(axis.text = element_text(size = 12),
         axis.title = element_text(size = 14))
 forest_plot_bmi
@@ -187,7 +187,7 @@ forest_plot_gen <- ggplot(lm_model_out_gen, aes(x = estimate, xmin = conf.low, x
   geom_vline(xintercept = 1, linetype = "dashed", color = "gray") +
   labs(x = "Effect size", y = "Predictor") +
   theme_minimal()+
-  theme(text = element_text(family = "Times New Roman")) +
+  theme(text = element_text(family = "Calibri")) +
   theme(axis.text = element_text(size = 12),
         axis.title = element_text(size = 14))
 forest_plot_gen
@@ -223,7 +223,7 @@ forest_plot_ht <- ggplot(lm_model_out_ht, aes(x = estimate, xmin = conf.low, xma
   geom_vline(xintercept = 1, linetype = "dashed", color = "gray") +
   labs(x = "Effect size", y = "Predictor") +
   theme_minimal()+
-  theme(text = element_text(family = "Times New Roman")) +
+  theme(text = element_text(family = "Calibri")) +
   theme(axis.text = element_text(size = 12),
         axis.title = element_text(size = 14))
 forest_plot_ht
@@ -265,7 +265,7 @@ forest_plot_age <- ggplot(lm_model_out_age, aes(x = estimate, xmin = conf.low, x
   geom_vline(xintercept = 1, linetype = "dashed", color = "gray") +
   labs(x = "Effect size", y = "Predictor") +
   theme_minimal()+
-  theme(text = element_text(family = "Times New Roman")) +
+  theme(text = element_text(family = "Calibri")) +
   theme(axis.text = element_text(size = 12),
         axis.title = element_text(size = 14))
 forest_plot_age

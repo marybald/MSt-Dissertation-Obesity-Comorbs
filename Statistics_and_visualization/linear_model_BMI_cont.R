@@ -8,7 +8,6 @@ library(gt)
 library(broom)
 library(forestmangr)
 library(forestplot)
-library(ggforestplot)
 library(extrafont)
 
 
@@ -33,7 +32,7 @@ BMI_IHD <- data %>%
   geom_boxplot() +
   labs(x = "IHD Category", y = "BMI (continuous)") +
   ggtitle("BMI by IHD endpoint category")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "Calibri"))
 BMI_IHD
 
 ##ANOVA BMI continuous against IHD category
@@ -54,7 +53,7 @@ BMI_OSAHS <- data %>%
   geom_boxplot() +
   labs(x = "OSAHS Status", y = "BMI (continuous)")+
   ggtitle("BMI by OSAHS status")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "Calibri"))
 BMI_OSAHS
 
 ##ANOVA
@@ -71,7 +70,7 @@ data %>%
   geom_boxplot()+
   labs(x = "Hypertension Stage", y = "BMI (continuous)")+
   ggtitle("BMI by hypertension stage")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "Calibri"))
 BMI_HT
 
 ##ANOVA 
@@ -91,7 +90,7 @@ data %>%
   geom_boxplot()+
   labs(x = "Age Group", y = "BMI (continuous)")+
   ggtitle("BMI by age group")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "Calibri"))
 BMI_AGE
 
 ##ANOVA 
@@ -111,7 +110,7 @@ BMI_Gender <- data %>%
   geom_boxplot() +
   labs(x = "Gender", y = "BMI (continuous)")+
   ggtitle("BMI by gender")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "Calibri"))
 BMI_Gender
 
 ##ANOVA
@@ -198,7 +197,7 @@ forest_plot <- ggplot(lm_model_out, aes(x = estimate, xmin = conf.low, xmax = co
   geom_vline(xintercept = 1, linetype = "dashed", color = "gray") +
   labs(x = "Effect size", y = "Predictor") +
   theme_minimal()+
-  theme(text = element_text(family = "Times New Roman")) +
+  theme(text = element_text(family = "Calibri")) +
   theme(axis.text = element_text(size = 12),
         axis.title = element_text(size = 14))
 forest_plot

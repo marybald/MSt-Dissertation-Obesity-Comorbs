@@ -40,6 +40,6 @@ label(data$IHD_CAT)   <- "Ischaemic Heart Disease Category"
 
 #creating and presenting the table
 
-table1(~AGE_GRP + BMI_CAT + BMI + GENDER + OSA_FLAG + HT_STAGE | IHD_CAT, data=data, render.continuous="Mean (SD)", topclass="Rtable1-shade Rtable1-times")
+table1(~AGE_GRP + BMI_CAT + BMI + GENDER + OSA_FLAG + HT_STAGE | IHD_CAT, data=data, render.continuous="Mean (SD)", topclass="Rtable1-shade Rtable1-calibri")
 
 

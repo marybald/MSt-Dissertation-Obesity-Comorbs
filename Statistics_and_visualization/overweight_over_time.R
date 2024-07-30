@@ -16,8 +16,8 @@ ggplot(data=overweight, aes(x=Year, y=Value, group=1)) +
 scale_x_continuous(name="Year", limits=c(1993, 2019), breaks=seq(1993,2019,3)) +
   scale_y_continuous(name="UK Population with Overweight or Obesity (%)", limits=c(52, 65), breaks=seq(52,65,2))+
   theme(
-    axis.text = element_text(size = 14, family = "Times New Roman"), 
-    axis.title = element_text(size = 16, family = "Times New Roman")
+    axis.text = element_text(size = 14, family = "Calibri"), 
+    axis.title = element_text(size = 16, family = "Calibri")
   )
   
   
